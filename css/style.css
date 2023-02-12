@@ -1,0 +1,228 @@
+/* *{
+    background-color: #06396c;
+} */
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+:root{
+    --c-main:blue ;
+    --c-second:rgb(190, 39, 175);
+    --c-accen: black ;
+}.txtMain{
+    color: var(--c-main);
+}
+.txtAccent{
+    color: var(--c-accen);
+}
+.txtSecond{
+    color: var(--c-second);
+}
+.bgMain{
+    background-color: var(--c-main);
+}
+.bgAccent{
+    background-color: var(--c-accen);
+}
+.bgSecond{
+    background-color: var(--c-second);
+}
+.linklink{
+    margin-left: 1200px;
+}
+.iconcaFirst{
+    color: rgb(190, 39, 175);
+}
+
+.titoloUno{
+    color:rgb(190, 39, 175) ;
+    animation-name: titoloGrande;
+    animation-duration: 2s; 
+    animation-delay: 1s;
+  
+  }
+  @keyframes titoloGrande {
+    0% {
+      -webkit-transform: translateX(150px);
+              transform: translateX(150px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+.btn_VA_over{
+    background-color: black;
+    border: 1px solid transparent;
+    color: white;
+    
+}
+
+.btn_VA_over:hover{
+    color: rgb(255, 9, 230);
+}
+.btn_VA_overB{
+    background-color: black;
+    border: 1px solid transparent;
+    
+    
+}
+.btn_VA_overB:hover{
+    color: BLUE;
+    
+    
+}
+.btn_VA{
+    background-color: black;
+    border: 1px solid hwb(306 15% 25%);
+    animation: btnVA;
+    animation-duration: 2s; 
+    animation-delay: 1s;
+}
+@keyframes btnVA {
+    0% {
+      -webkit-transform: translateX(-150px);
+              transform: translateX(-150px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.circle-data{
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(190, 39, 175);
+    border-radius: 50%;
+}
+.swiper {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .swiper-slide:nth-child(1n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(2n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(3n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(4n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(5n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(6n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(7n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(8n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(9n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  
+  .swiper-slide:nth-child(10n) {
+    background-color: black;
+    border: 2px solid rgb(190, 39, 175) ;
+  }
+  .img_gif{
+    
+ background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgb(0, 0, 0,1) 70%), url(../media/gitMondo.gif) ;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+    
+    width: 500px;
+    height: 400px;
+    
+  }
+  .prodottiCaricatiRmv{
+    opacity: 0;
+  }
+  .titoloDue{
+    color:rgb(190, 39, 175) ;
+    animation-name: titoloPiccolo;
+    animation-duration: 2s; 
+    animation-delay: 1s;
+  
+  }
+  @keyframes titoloPiccolo {
+    0% {
+      -webkit-transform: translateX(150px);
+              transform: translateX(150px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .footer{
+    border: 2px solid rgb(190, 39, 175);
+  }
+.lavoraConNoi:hover{
+  color: rgb(190, 39, 175);
+  border: 2px solid white;
+  border-radius: 5%;
+}
+.iconsOver:hover{
+  color: rgb(190, 39, 175);
+}
+.workitem {
+  cursor: pointer;
+  color: rgb(190, 39, 175);
+  padding: .25rem .75rem;
+  font-weight: 900;
+  border-radius: .5rem;
+}
+.workfilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .75rem;
+  margin-bottom: 2rem;
+}
+.active-work {
+  background-color:rgb(190, 39, 175);
+  color: white;
+}
