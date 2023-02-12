@@ -57,7 +57,7 @@ btnCuore.addEventListener('click',()=>{
   cuoricino.classList.toggle("cuoricinoRmv")
 })
 
-// Bottoni per categoria
+// Bottoni per tutte categorie
 const btnC = document.querySelector("#btnC")
 filtroCategorie(numCat(mapCat)).forEach((elm)=>{
   let span = document.createElement("span")
