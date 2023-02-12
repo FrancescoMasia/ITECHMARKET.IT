@@ -114,12 +114,13 @@ categorie.forEach((item) => {
 const caruselWrapper = document.querySelector("#slidesUCWrapper");
 const ultimiOggetti = annunci.slice(-5)
 ultimiOggetti.forEach((el)=>{
-  const imgUrl = el.img_url
   let div = document.createElement("div")
-  div.classList.add("swiper-slide")
-  let img = document.createElement("img")
-    img.src = imgUrl;
-    div.appendChild(img)
+  div.classList.add("cardCinque")
+  div.innerHTML = `<div class="card-details">
+  <p class="text-title text-white">${el.name_product}</p>
+  <p class=" text-white">${el.brend_product}</p>
+</div>
+<button class="card-button">More info</button>`
   caruselWrapper.appendChild(div)
 
 })
@@ -141,7 +142,7 @@ ultimiOggetti.forEach((el)=>{
 const prodottiCaricati = document.querySelector("#prodottiCaricati");
 document.addEventListener("scroll", () =>{
     let pxY = window.pageYOffset;
-    if (pxY >220 ){
+    if (pxY >320 ){
         prodottiCaricati.classList.remove("prodottiCaricatiRmv");
         prodottiCaricati.style.transform = "translateX(0px)";
         prodottiCaricati.style.transition = "0.5s";
@@ -160,7 +161,7 @@ document.addEventListener("scroll", () =>{
 const ratingProducts = document.querySelector("#ratingProducts");
 document.addEventListener("scroll", () =>{
     let pxY = window.pageYOffset;
-    if (pxY >520 ){
+    if (pxY >620 ){
       ratingProducts.classList.remove("prodottiCaricatiRmv");
       ratingProducts.style.transform = "translateX(0px)";
       ratingProducts.style.transition = "0.5s";
@@ -179,7 +180,7 @@ document.addEventListener("scroll", () =>{
 const ratingSellers = document.querySelector("#ratingSellers");
 document.addEventListener("scroll", () =>{
     let pxY = window.pageYOffset;
-    if (pxY >820 ){
+    if (pxY >920 ){
       ratingSellers.classList.remove("prodottiCaricatiRmv");
       ratingSellers.style.transform = "translateX(0px)";
       ratingSellers.style.transition = "0.5s";

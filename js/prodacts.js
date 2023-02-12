@@ -42,6 +42,7 @@ tuttiAnnunci.forEach((elm)=>{
   div.classList.add("col-4","my-1", "justify-content-center","d-flex")
   div.innerHTML = `<div class="card cardTot mix ${elm.category}" style="width: 18rem;">
   <img src="${elm.img_url[0]}" class="card-img-top" alt="...">
+  <button id= "btnCuore" class = "text-end me-2 border-0 btn btn-transparent "><i id="cuoricino" class=" fs-3  bi bi-heart-fill"></i></button>
   <div class="card-body">
     <h5 class="card-title">${elm.name_product}</h5>
     <p>${elm.pubblished}</p>
@@ -49,6 +50,11 @@ tuttiAnnunci.forEach((elm)=>{
   </div>
 </div>`
 cardsWrapper.appendChild(div)
+})
+let btnCuore = document.querySelector("#btnCuore")
+let cuoricino = document.querySelector("#cuoricino")
+btnCuore.addEventListener('click',()=>{
+  cuoricino.classList.toggle("cuoricinoRmv")
 })
 
 // Bottoni per categoria
