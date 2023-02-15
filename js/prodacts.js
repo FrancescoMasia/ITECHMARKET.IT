@@ -33,63 +33,66 @@ function filtroCategorie(array) {
 }
 console.log(filtroCategorie(numCat(mapCat)))
 
+const categorie = filtroCategorie(numCat(mapCat))
+
+// categorie nel dropdown
+let params = new URLSearchParams(location.search)
+let category = params.get('category')
+let prodacts = []
+if (category == "all") {
+ prodacts = annunci 
+} else {
+   prodacts = annunci.filter((prodacts)=>{
+return prodacts.category == category
+})
+}
+
+console.log(prodacts)
 
 // Cards iniettate in html
-const tuttiAnnunci = annunci.reverse()
+const tuttiAnnunci = prodacts.reverse()
 const cardsWrapper = document.querySelector("#cardsWrapper")
-tuttiAnnunci.forEach((elm)=>{
+tuttiAnnunci.forEach((el)=>{
   let div = document.createElement("div")
-  div.classList.add("col-4","my-1", "justify-content-center","d-flex")
-  div.innerHTML = `<div class="card cardTot mix ${elm.category}" style="width: 18rem;">
-  <img src="${elm.img_url[0]}" class="card-img-top" alt="...">
-  <button id= "btnCuore" class = "text-end me-2 border-0 btn btn-transparent "><i id="cuoricino" class=" fs-3  bi bi-heart-fill"></i></button>
-  <div class="card-body">
-    <h5 class="card-title">${elm.name_product}</h5>
-    <p>${elm.pubblished}</p>
-    <a href="#" class="btn btn-primary">${elm.price}</a>
+  div.classList.add("col-12","col-lg-4","my-3","me-5","mx-lg-auto", "justify-content-center","d-flex")
+  div.innerHTML = `<div class="card border-0 card-category p-3 box-color" style="width: 18rem;">
+  <img src="${el.img_url[0]}" alt="" class="card-img-top">
+  <div class="card-body">            
+    <h5 class="card-title fs-main bg-mix fs-3">${el.name_product}</h5>            
+    <div class="mt-3">
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Categoria:</p><span class="bg-mix fst-italic">${el.category}</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Stato:</p><span class="bg-mix fst-italic">${el.usage == false ? "nuovo" : "usato"}</span>
+      </div>              
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Prezzo:</p><span class="bg-mix fst-italic">${el.price}</span>
+      </div>   
+       <div class="d-flex justify-content-between">
+         <p class="card-text text-white mb-0 fs-main">Pubblicato:</p><span class="bg-mix fst-italic">${el.pubblished}</span>
+       </div>              
+    </div>
+    <div class="d-flex mt-4">              
+      <button class="btn btn-category d-block ms-auto">
+        <i class="bi bi-chevron-right text-white"></i>
+      </button>
+    </div>            
   </div>
 </div>`
 cardsWrapper.appendChild(div)
 })
-let btnCuore = document.querySelector("#btnCuore")
-let cuoricino = document.querySelector("#cuoricino")
-btnCuore.addEventListener('click',()=>{
-  cuoricino.classList.toggle("cuoricinoRmv")
-})
-
-// Bottoni per tutte categorie
-const btnC = document.querySelector("#btnC")
-filtroCategorie(numCat(mapCat)).forEach((elm)=>{
-  let span = document.createElement("span")
-  span.innerHTML = `<span class="workitem " data-filter=".${elm}">${elm}</span>`
-  btnC.appendChild(span)
-})
 
 
 
-// /----- Link Active Work -----/
-const linkWork = document.querySelectorAll('.workitem')
-
-function activeWork() {
-    linkWork.forEach(l => l.classList.remove('active-work'))
-    this.classList.add('active-work')
-}
-
-linkWork.forEach(l=> l.addEventListener("click", activeWork))
-
-
-
-
-
-// /---------- MIXITUP FILTER PORTFOLIO ----------/
-let mixerPortfolio = mixitup('.containerTot', {
-    selectors: {
-        target: '.cardTot'
-    },
-    animation: {
-        duration: 300
-    }
+// dropdown
+const categorieWrapper = document.querySelector("#categorieWrapper")
+categorie.forEach((item) => {
+  let li = document.createElement("li")
+  li.innerHTML = `<a class="dropdown-item" href="./prodacts.html?category=${item}">${item}</a>`
+  categorieWrapper.appendChild(li)
 });
+
 
 
 

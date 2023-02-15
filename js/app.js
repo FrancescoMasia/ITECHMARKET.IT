@@ -88,19 +88,18 @@ function filtroCategorie(array) {
 }
 console.log(filtroCategorie(numCat(mapCat)))
 const categorie = filtroCategorie(numCat(mapCat))
-const slidesWrapper = document.querySelector("#slidesWrapper")
-categorie.forEach((el) => {
-  let div = document.createElement("div")
-  div.classList.add("swiper-slide")
-  div.innerText = el;
-  slidesWrapper.appendChild(div)
-});
-
+// const slidesWrapper = document.querySelector("#slidesWrapper")
+// categorie.forEach((el) => {
+//   let div = document.createElement("div")
+//   div.classList.add("swiper-slide")
+//   div.innerText = el;
+//   slidesWrapper.appendChild(div)
+// });
 // dropDown Categorie nella navbar
 const categorieWrapper = document.querySelector("#categorieWrapper")
 categorie.forEach((item) => {
   let li = document.createElement("li")
-  li.innerHTML = `<a class="dropdown-item" href="#">${item}</a>`
+  li.innerHTML = `<a class="dropdown-item" href="./prodacts.html?category=${item}">${item}</a>`
   categorieWrapper.appendChild(li)
 });
 
@@ -110,17 +109,41 @@ categorie.forEach((item) => {
 
 
 
+
+
+
+
 // ultimi cinque prodotti
 const caruselWrapper = document.querySelector("#slidesUCWrapper");
-const ultimiOggetti = annunci.slice(-5)
+const ultimiOggetti = annunci.slice(-4)
 ultimiOggetti.forEach((el)=>{
   let div = document.createElement("div")
-  div.classList.add("cardCinque")
-  div.innerHTML = `<div class="card-details">
-  <p class="text-title text-white">${el.name_product}</p>
-  <p class=" text-white">${el.brend_product}</p>
-</div>
-<button class="card-button">More info</button>`
+  div.classList.add("col-12","col-lg-3","my-3","mx-auto","mx-lg-auto", "justify-content-center","d-flex")
+  div.innerHTML = `<div class="card border-0 card-category p-3 box-color" style="width: 18rem;">
+  <img src="${el.img_url[0]}" alt="" class="card-img-top">
+  <div class="card-body">            
+    <h5 class="card-title fs-main bg-mix fs-3">${el.name_product}</h5>            
+    <div class="mt-3">
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Categoria:</p><span class="bg-mix fst-italic">${el.category}</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Stato:</p><span class="bg-mix fst-italic">${el.usage == false ? "nuovo" : "usato"}</span>
+      </div>              
+      <div class="d-flex justify-content-between">
+        <p class="card-text text-white mb-0 fs-main">Prezzo:</p><span class="bg-mix fst-italic">${el.price}</span>
+      </div>   
+       <div class="d-flex justify-content-between">
+         <p class="card-text text-white mb-0 fs-main">Pubblicato:</p><span class="bg-mix fst-italic">${el.pubblished}</span>
+       </div>              
+    </div>
+    <div class="d-flex mt-4">              
+      <button class="btn btn-category d-block ms-auto">
+        <i class="bi bi-chevron-right text-white"></i>
+      </button>
+    </div>            
+  </div>
+</div>`
   caruselWrapper.appendChild(div)
 
 })
@@ -192,11 +215,6 @@ document.addEventListener("scroll", () =>{
 });
 
 
-
-let swiper = new Swiper(".mySwiper", {
-  effect: "cards",
-  grabCursor: true,
-});
 
 
 

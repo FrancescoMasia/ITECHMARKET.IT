@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
+<body>
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark bg-transparent px-5" aria-label="Fourth navbar example">
+<nav class="navbar navBarPc navbar-expand-md navbar-dark bg-transparent px-5" aria-label="Fourth navbar example">
   <div class="container-fluid">
     <a href="./index.html"><img  src="./media/LOGO.png" width="150" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +23,16 @@
         <li class="nav-item mx-2 ">
           <a class="nav-link  btn_VA_over" href="#">Servizi</a>
         </li>
-        
+        <li class="nav-item mx-2 ">
+          <div class="dropdown">
+            <button class="btn text-white dropdown-toggle mx-auto " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </button>
+            <ul id="categorieWrapper" class="dropdown-menu dropdownItem">
+                <li class="dropdown-item  "> <a class="text-decoration-none text-black" href="./prodacts.html?category=all">tutte le categirie</a> </li>
+            </ul>
+          </div>
+        </li>
         <li class="nav-item mx-2 ">
           <a class="nav-link  btn_VA_over" href="#">Contatta </a>
         </li>
@@ -30,13 +40,22 @@
           <a class="nav-link  btn_VA_over" href="#">Diventa Admin </a>
         </li>
       </ul>
-      <button class="mx-3 btn btn_VA_overB   iconcaFirst fs-3  "><i class="bi bi-box-arrow-in-right"></i></button>
+      <a href="./accedi.html" class="mx-3 btn btn_VA_overB   iconcaFirst fs-3  "><i class="bi bi-box-arrow-in-right"></i></a>
       <button class="mx-3 btn btn_VA_overB  iconcaFirst fs-3  "><i class="bi bi-person-plus"></i></button>
     </div>
   </div>
 </nav>
+<!-- tastoBack per telefono -->
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-12 text-end">
+      <a class=" me-5 my-5 display-3 frecciaIndietro" href="./index.html"><i class="bi bi-skip-backward-fill"></i></a>
+    </div>
+  </div>
+</div>
+
 <!-- Titolo e sottotilo -->
-<div class="container mt-0 mt-lg-5">
+<div class="container mt-5 ">
   <div class="row my-0 my-lg-5">
     <div class="col-12 col-lg-6   my-lg-5 ">
       <h1 class=" titoloUno ">ITECHMARKET</h1>
@@ -50,35 +69,128 @@
   </div>
 </div>
 
-<!-- bottoni categoria -->
-<div class="container-fluid ">
-  <div class="row  text-center">
-    <div id="btnC" class="workfilters ">
-      <span class="workitem  active-work" data-filter="all">All</span>
-      <!-- <span class="workitem " data-filter=".web">Web</span>
-      <span class="workitem " data-filter=".app">App</span>
-      <span class="workitem " data-filter=".design">Design</span> -->
-  </div>
+
+<div class="dropdown text-center filtriCell my-5">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    fai la tua ricerca in base a ....
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">prezzo 0 a 100</a></li>
+    <li><a class="dropdown-item" href="#">prezzo 100 a 1000</a></li>
+    <li><a class="dropdown-item" href="#">prezzo 1000 +</a></li>
+    <li><a class="dropdown-item" href="#">nuovo</a></li>
+    <li><a class="dropdown-item" href="#">usato</a></li>
+    
+  </ul>
+</div>
+<!-- filtri -->
+<div class="d-flex justify-content-around ">
+<div class="container bg-gradient ms-5 filtri w-25">
+  <div class="row">
+    <div class="col-12 mt-3   ">
+      <h3 class="text-white">categorie</h3>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label text-white" for="flexCheckDefault">
+          Categoria
+        </label>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      <h3 class="text-white">filtro per prezzo</h3>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label text-white" for="flexRadioDefault1">
+          0 a 100
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input text-white" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label text-white" for="flexRadioDefault2">
+          100 a 1000
+        </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input text-white" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+          <label class="form-check-label text-white" for="flexRadioDefault3">
+            1000 +
+          </label>
+      </div>
+    </div>
+    <div class="col-12 mt-3">
+      
+        <h3 class="text-white">filtro nuovo o usato</h3>
+        <div class="form-check">
+          <input class="form-check-input text-white" type="radio" name="flexRadioDefault" id="flexRadioDefaul4">
+          <label class="form-check-label text-white" for="flexRadioDefault4">
+            nuovo
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input text-white" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+          <label class="form-check-label text-white" for="flexRadioDefault5">
+            usato
+          </label>
+          </div>
+    </div>
   </div>
 </div>
 
 
 <!-- cards -->
-<div class="container-fluid containerTot">
+<div class="container-fluid  containerTot">
   <div id="cardsWrapper" class="row mx-auto d-flex ">
+    
   </div>
 </div>
+</div>
 <!-- footer -->
-<div class="container mt-5">
+<div class="container-fluid footer__cont  mt-5">
   <div class="row h-100">
-    <div class="col-6 text-white text-center px-5"><h2 class="text-white">Passione e competenza dei nostri admin attribuiscono serietà al nostro sito.</h2></div>
+    <div class="col-6 text-white text-center px-5 mt-5 "><h2 class="text-white fs-1">Passione e competenza.</h2></div>
     <div class="col-6 text-white justify-content-end d-flex text-center">
       <div class="footer lavoraConNoi rounded-1 w-25">
-        <a class="text-decoration-none text-white " href=""><h3 class="mt-3 ">Lavora con noi</h3></a>
+        <a class="text-decoration-none text-white " href=""><h3 class="mt-5 ">Lavora con noi</h3></a>
       </div>
-      <div class=" w-25">
-      </div>
-      <div class="footer w-25 mt-5 rounded-1">
+      
+      <div class=" w-25 mt-5 rounded-1">
         <div><i class="bi bi-whatsapp iconsOver"></i></div>
         <div><i class="bi bi-linkedin iconsOver"></i></div>
         <div><i class="bi bi-instagram iconsOver"></i></div>
@@ -87,7 +199,7 @@
     </div>
   </div>
 </div>
-<body>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="./js/mixitup.min.js"></script>
   <script src="./js/prodacts.js" ></script>
