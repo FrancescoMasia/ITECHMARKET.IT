@@ -1,6 +1,3 @@
-/* *{
-  background-color: #06396c;
-} */
 body{
   overflow-x: hidden;
   background-color: black;
@@ -105,7 +102,6 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  
   width: 500px;
   height: 400px;
   
@@ -118,7 +114,6 @@ body{
   animation-name: titoloPiccolo;
   animation-duration: 2s; 
   animation-delay: 1s;
-  
 }
 @keyframes titoloPiccolo {
   0% {
@@ -132,19 +127,15 @@ body{
     opacity: 1;
   }
 }
-
 .lavoraConNoi{
   color: white;
 }
 .lavoraConNoi:hover{
   color: rgb(58, 67, 238);
-  
-  
 }
 .iconsOver:hover{
   color: rgb(58, 67, 238);
 }
-
 /* style delle cards */
 .box-color {
   background-color: hsl(242, 14%, 10%);
@@ -152,31 +143,18 @@ body{
 .bg-mix{
   color:rgb(211, 198, 198) ;
 }
-
-
-
-
-
-
 .btnS{
   color:#5264AE;
 }
 .btnS:hover{
   color:rgb(32, 12, 114);
-  
 }
-
-
 .footer__cont{
   background-color: rgb(141, 1, 127);
 }
-.cuoricinoRmv {
-  color: red;
-  
-}
 
 
-/* CSS PER ACCEDI */
+/* CSS PER ACCEDI.HTML */
 .login-box {
   position: absolute;
   top: 50%;
@@ -189,11 +167,9 @@ body{
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
 }
-
 .login-box .user-box {
   position: relative;
 }
-
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
@@ -205,7 +181,6 @@ body{
   outline: none;
   background: transparent;
 }
-
 .login-box .user-box label {
   position: absolute;
   top: 0;
@@ -216,7 +191,6 @@ body{
   pointer-events: none;
   transition: .5s;
 }
-
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -20px;
@@ -224,7 +198,6 @@ body{
   color: #bdb8b8;
   font-size: 12px;
 }
-
 .login-box form a {
   position: relative;
   display: inline-block;
@@ -238,7 +211,6 @@ body{
   margin-top: 40px;
   letter-spacing: 4px
 }
-
 .login-box a:hover {
   background: rgb(190, 39, 175);
   color: #fff;
@@ -248,22 +220,18 @@ body{
   0 0 50px rgb(190, 39, 175),
   0 0 100px rgb(190, 39, 175);
 }
-
 .login-box a span {
   position: absolute;
   display: block;
 }
-
 @keyframes btn-anim1 {
   0% {
     left: -100%;
   }
-  
   50%,100% {
     left: 100%;
   }
 }
-
 .login-box a span:nth-child(1) {
   bottom: 2px;
   left: -100%;
@@ -272,6 +240,7 @@ body{
   background: linear-gradient(90deg, transparent, rgb(190, 39, 175));
   animation: btn-anim1 2s linear infinite;
 }
+
 .icons_accedi{
   color: white;
   margin-left: 30%;
@@ -293,7 +262,6 @@ body{
   color:rgb(190, 39, 175) ;
 }
 .dropdown-toggle {
-  
   margin-left: -12px;
 }
 .filtriCell{
@@ -305,7 +273,6 @@ body{
 }
 .textInput{
   font-size: 30px;
-  
 }
 .dontWorkMobile{
   display: none;

@@ -2,13 +2,6 @@ fetch("./prodotti.json")
   .then(response => response.json()) // the .json() method parses the JSON response into a JS object literal
   .then(annunci =>{
 
-
-
-
-
-
-
-
     // media rating products
 function mediaFinale_ratingProducts(array) {
   const mappa = array.map((x)=>{
@@ -29,15 +22,12 @@ ultimoOggetto.forEach((el)=>{
   prodottiCaricatiWrapper.appendChild(p)
 })
 
-
 // rating products
 const ratingProductsWrapper = document.querySelector("#ratingProductsWrapper")
-
   let p1 = document.createElement("p")
   p1.classList.add("display-3")
   p1.innerText = Math.round(mediaFinale_ratingProducts(annunci));
   ratingProductsWrapper.appendChild(p1)
-
 
   // rating sellers
   function mediaFinale_ratingSeller(array) {
@@ -54,15 +44,6 @@ const ratingProductsWrapper = document.querySelector("#ratingProductsWrapper")
   p2.classList.add("display-3")
   p2.innerText = Math.round(mediaFinale_ratingSeller(annunci));
   ratingSellerWrapper.appendChild(p2)
-
-
-  
-
-
-
-
-
-
 
 // categorie
 const mapCat = annunci.map((el)=>{
@@ -88,14 +69,6 @@ function filtroCategorie(array) {
 }
 console.log(filtroCategorie(numCat(mapCat)))
 const categorie = filtroCategorie(numCat(mapCat))
-// const slidesWrapper = document.querySelector("#slidesWrapper")
-// categorie.forEach((el) => {
-//   let div = document.createElement("div")
-//   div.classList.add("swiper-slide")
-//   div.innerText = el;
-//   slidesWrapper.appendChild(div)
-// });
-// dropDown Categorie nella navbar
 const categorieWrapper = document.querySelector("#categorieWrapper")
 categorie.forEach((item) => {
   let li = document.createElement("li")
@@ -103,17 +76,7 @@ categorie.forEach((item) => {
   categorieWrapper.appendChild(li)
 });
 
-
-
-
-
-
-
-
-
-
-
-// ultimi cinque prodotti
+// ultimi quattro prodotti
 const caruselWrapper = document.querySelector("#slidesUCWrapper");
 const ultimiOggetti = annunci.slice(-4)
 ultimiOggetti.forEach((el)=>{
@@ -145,21 +108,7 @@ ultimiOggetti.forEach((el)=>{
   </div>
 </div>`
   caruselWrapper.appendChild(div)
-
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // scroll prima sezione
 const prodottiCaricati = document.querySelector("#prodottiCaricati");
@@ -176,10 +125,6 @@ document.addEventListener("scroll", () =>{
     }
 });
 
-
-
-
-
 // sroll seconda sezione
 const ratingProducts = document.querySelector("#ratingProducts");
 document.addEventListener("scroll", () =>{
@@ -195,10 +140,6 @@ document.addEventListener("scroll", () =>{
     }
 });
 
-
-
-
-
 // scroll terza sezione
 const ratingSellers = document.querySelector("#ratingSellers");
 document.addEventListener("scroll", () =>{
@@ -213,41 +154,6 @@ document.addEventListener("scroll", () =>{
       ratingSellers.style.transition = "0.5s";
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })

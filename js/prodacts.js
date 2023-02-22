@@ -1,7 +1,6 @@
 fetch("./prodotti.json")
   .then(response => response.json()) // the .json() method parses the JSON response into a JS object literal
   .then(annunci =>{
-
     // categorie
 const mapCat = annunci.map((el)=>{
   return el.category
@@ -25,9 +24,7 @@ function filtroCategorie(array) {
   return arrayVuoto
 }
 console.log(filtroCategorie(numCat(mapCat)))
-
 const categorie = filtroCategorie(numCat(mapCat))
-
 // categorie nel dropdown
 let params = new URLSearchParams(location.search)
 let category = params.get('category')
@@ -39,9 +36,6 @@ if (category == "all") {
 return prodacts.category == category
 })
 }
-
-console.log(prodacts)
-
 // Cards iniettate in html
 const tuttiAnnunci = prodacts.reverse()
 const cardsWrapper = document.querySelector("#cardsWrapper")
@@ -75,9 +69,6 @@ tuttiAnnunci.forEach((el)=>{
 </div>`
 cardsWrapper.appendChild(div)
 })
-
-
-
 // dropdown
 const categorieWrapper = document.querySelector("#categorieWrapper")
 categorie.forEach((item) => {
