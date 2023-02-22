@@ -132,7 +132,7 @@ ultimiOggetti.forEach((el)=>{
       </div>              
       <div class="d-flex justify-content-between">
         <p class="card-text text-white mb-0 fs-main">Prezzo:</p><span class="bg-mix fst-italic">${el.price}</span>
-      </div>   
+      </div>  
        <div class="d-flex justify-content-between">
          <p class="card-text text-white mb-0 fs-main">Pubblicato:</p><span class="bg-mix fst-italic">${el.pubblished}</span>
        </div>              

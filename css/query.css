@@ -23,4 +23,7 @@
     .filtriCell{
       display: none;
     }
+    .dontWorkMobile{
+      display:list-item;
+    }
 }

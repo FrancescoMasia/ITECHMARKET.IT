@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SITO COMPRAVENDITA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/query.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body >
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent px-5" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a href="./index.html"><img  src="./media/LOGO.png" width="150" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item mx-2 ">
+            <a class="nav-link  btn_VA_over" href="#">Servizi</a>
+          </li>
+          <li class="nav-item mx-2 ">
+            <div class="dropdown">
+              <button class="btn text-white dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorie
+              </button>
+              <ul id="categorieWrapper" class="dropdown-menu dropdownItem">
+                <li class="dropdown-item  "> <a class="text-decoration-none text-black" href="./prodacts.html?category=all">tutte le categirie</a> </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item mx-2 ">
+            <a class="nav-link  btn_VA_over" href="#">Contatta </a>
+          </li>
+          <li class="nav-item mx-2 ">
+            <a class="nav-link  btn_VA_over" href="#">Diventa Admin </a>
+          </li>
+        </ul>
+        <a href="./accedi.html" class="mx-3 btn btn_VA_overB   iconcaFirst fs-3  "><i class="bi bi-box-arrow-in-right"></i></a>
+        <a href="./registrati.html" class="mx-3 btn btn_VA_overB  iconcaFirst fs-3  "><i class="bi bi-person-plus"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- INTESTAZIONE -->
+  <div class="container">
+    <div class="row">
+      <h1 class="txtSecond">Registrati nel nostro sito</h1>
+      <h2 class="txtSecond">Vendi ed acquista dove vuoi e quando vuoi...</h2>
+      <div class="d-flex mt-5">
+        <h2 class="mx-5 mt-3  text-white">Accedi con :</h2>
+        <a href=""><i class="text-primary mx-4 mt-3 mt-lg-0  bi display-4  bi-facebook"></i>
+        </a>
+        <a href=""><i class="text-primary mx-4 mt-3 mt-lg-0 bi display-4  bi-google"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- PRIME DUE COLONNE -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8 ">
+        <div class="container">
+          <div class="row mx-auto mt-5">
+            <div class="col-12 col-lg-6 dontWorkMobile">
+              
+              <p class="textInput text-white my-5">inserisci il nome</p>
+              <p class="textInput text-white my-5">inserisci il cognome</p>
+              <p class="textInput text-white my-5">inserisci l'e-mail</p>
+              <p class="textInput text-white my-5">inserisci la password</p>
+              <p class="textInput text-white my-5">numero di telefono</p>
+            </div>
+            <div class="col-12 col-lg-6 mt-5">
+              
+              <div class="input-group movement_down  ">
+                <input type="text" aria-label="First name" placeholder="nome"class="form-control my-4">
+              </div>
+              <div class="input-group movement_down ">
+                <input type="text" aria-label="Last name" placeholder="cognome" class="form-control my-4">
+              </div>
+              <div class="input-group movement_down ">
+                <input type="text" aria-label="e-mail" placeholder="e-mail" class="form-control my-4">
+              </div>
+              <div class="input-group movement_down ">
+                <input type="password" aria-label="password" placeholder="password" class="form-control my-4">
+              </div>
+              <div class="input-group movement_down  ">
+                <input type="text" aria-label="First name" placeholder="nome"class="form-control my-4">
+              </div>
+              <button class="mx-auto btn btn-primary text-white btn_VA my-lg-5">iscriviti</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4  ">
+        <h3 class="txtSecond"> Perchè vendere o acqustare <br> sul nostro sito...</h3>
+        <div class="display-6 my-3  d-flex">
+          <i class="text-white mx-2 bi bi-shield-fill-check"></i>
+          <p class="text-white">sicuro</p>
+        </div>
+        <div class="display-6 my-3  d-flex">
+          <i class="text-white mx-2 bi bi-shield-fill-check"></i>
+          <p class="text-white">comodo</p>
+        </div>
+        <div class="display-6 my-3  d-flex">
+          <i class="text-white mx-2 bi bi-shield-fill-check"></i>
+          <p class="text-white">sostenibile</p>
+        </div>
+        <div class="display-6 my-3  d-flex">
+          <i class="text-white mx-2 bi bi-shield-fill-check"></i>
+          <p class="text-white">affidabile</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="./js/app.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>

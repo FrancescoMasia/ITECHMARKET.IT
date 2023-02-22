@@ -2,14 +2,7 @@ fetch("./prodotti.json")
   .then(response => response.json()) // the .json() method parses the JSON response into a JS object literal
   .then(annunci =>{
 
-
-
-
-
-
-
-
-// categorie
+    // categorie
 const mapCat = annunci.map((el)=>{
   return el.category
 })
